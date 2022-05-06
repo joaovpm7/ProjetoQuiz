@@ -132,3 +132,16 @@ legend{
 	padding: 5px;
 	background: #9EB6E2;
 }
+
+form p{
+	line-height: 50px;
+	margin: 0px;
+	padding: 1px;
+}
+
+label[for=nome], label[for=email], label[for=celular]{
+	widows: 60px;
+	display: block;
+	float: left;
+}
+

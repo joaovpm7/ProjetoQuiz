@@ -1,43 +1,66 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/estilo.css" rel="stylesheet" type="text/css" />
-<title>FORMULÁRIO</title>
+<meta charset="utf-8">
+<title>formulario</title>
+<link href="css/estilo.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-	<h1><img src="imagens/quiz_formulario.jpg" alt="Quiz - formulario" width="818" height="97" id="quiz" />
-</h1>
-	<form id="form1" method="post" action="obrigado.html">
-		<fieldset>
-			<legend>Dados Pessoais</legend>
-			<p>
-				<label for="nome">Nome</label>
-				<input name="nome" type="text" class="linha" id="nome"/>
-			</p>
-			<p>
-				<label for="email">Email</label>
-				<input name="email" type="text" class="linha" id="email"/>
-			</p>
-			<p>
-				<label for="celular">Celular</label>
-				<input name="celular" type="text" class="linha" id="celular"/>
-			</p>
-			<p>
-				<label>
-					<input type="radio" name="tipoFiscal"
-						   value="PF" id="tipoFiscal_0"/>
-					Pessoa Física
-				</label>
-				<br/>
-				<label>
-					<input type="radio" name="tipoFiscal"
-						   value="PJ" id="tipoFiscal_1"/>
-					Pessoa Jurídica
-				</label>
-			</p>
-		</fieldset>
+	<p><img src="imagens/quiz_formulario.jpg" width="818" height="97" alt="Quiz - como funciona" /> </p>
+
+<form id="form1" method="post" action="obrigado.html">
+  <fieldset>
+    <legend>Dados Pessoais</legend>
+    <p>
+      <label for="nome">Nome</label>
+      <input name="nome" type="text" class="linha" id="nome" />
+    </p><p>
+      <label for="email">Email</label>
+      <input name="email" type="text" class="linha" id="email" />
+    </p>
+    <p>
+      <label for="celular">Celular</label>
+      <input name="celular" type="text" class="linha" id="celular" />
+    </p>
+	 </fieldset>
+
+<fieldset>
+    <legend>Opt-in</legend>
+    <p>
+      <label>
+        <input type="checkbox" name="informacoes" value="infoEmail" id="informacoes_0" />
+      Desejo receber informações por email</label>
+      <br />
+      <label>
+        <input type="checkbox" name="informacoes" value="infoCelular" id="informacoes_1" />
+        Desejo receber informações por celular</label>
+    </p>
+  </fieldset>
+	
+	<fieldset>
+    <legend>Sugestões de interesse</legend>
+    <p>
+      <label for="interesses">Interesses</label>
+      <select name="interesses" id="interesses">
+        <option> </option>
+        <option value="tec">Tecnologia</option>
+        <option value="edu">Educação</option>
+        <option value="pol">Política</option>
+      </select>
+    </p>
+    <p>
+      <label for="sugestoes">Sugestões</label>
+      <textarea name="sugestoes" id="sugestoes" cols="45" rows="5"></textarea>
+    </p>
+  </fieldset>
+	
+	<p>
+    <input name="imageField" type="image" class="botao" id="imageField" src="imagens/enviar_form.jpg" />
+  </p>
+	<p>&nbsp;</p>
 	</form>
+
+	
 </body>
 </html>
