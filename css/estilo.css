@@ -109,3 +109,26 @@ a.linque:hover{
 	color: #f90;
 	text-decoration: underline;
 }
+
+form{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #395D81;
+	font-weight: bolder;
+	margin-left: 70px;
+}
+
+fieldset{
+	border: 1px solid #395D81;
+	padding: 7px;
+	width: 650px;
+	clear: left;
+	float: left;
+	margin-bottom: 30px;
+}
+
+legend{
+	color: #FFFFFF;
+	padding: 5px;
+	background: #9EB6E2;
+}

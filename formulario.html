@@ -1,11 +1,14 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/estilo.css" rel="stylesheet" type="text/css" />
 <title>FORMULÁRIO</title>
 </head>
 
 <body>
+	<h1><img src="imagens/quiz_formulario.jpg" alt="Quiz - formulario" width="818" height="97" id="quiz" />
+</h1>
 	<form id="form1" method="post" action="obrigado.html">
 		<fieldset>
 			<legend>Dados Pessoais</legend>
@@ -17,8 +20,24 @@
 				<label for="email">Email</label>
 				<input name="email" type="text" class="linha" id="email"/>
 			</p>
+			<p>
+				<label for="celular">Celular</label>
+				<input name="celular" type="text" class="linha" id="celular"/>
+			</p>
+			<p>
+				<label>
+					<input type="radio" name="tipoFiscal"
+						   value="PF" id="tipoFiscal_0"/>
+					Pessoa Física
+				</label>
+				<br/>
+				<label>
+					<input type="radio" name="tipoFiscal"
+						   value="PJ" id="tipoFiscal_1"/>
+					Pessoa Jurídica
+				</label>
+			</p>
 		</fieldset>
 	</form>
-	
 </body>
 </html>
