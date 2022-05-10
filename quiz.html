@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Quiz - Comportamentos no Dreamweaver</title>
 <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+<link href="SpryAssets/SpryEffects.js.css" rel="stylesheet" type="text/css" />
 <script src="jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="jQueryAssets/jquery-ui-effects.custom.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -90,8 +91,8 @@ function MM_setTextOfLayer(objId,x,newText) { //v9.0
 	adicionar um comportamento?</h2>
 		
 	
-	<p><img src="imagens/nomear.jpg" alt="nomear" width="357" height="51" id="p2nomear"/>
-    <img src="imagens/selecionar.jpg" alt="elemento" width="357" height="51" id="p2elemento" onclick="MM_showHideLayers('resp2n','','hide')"/></p>
+	<p><a href="javascript:;" onclick="MM_changeProp('resp2s','','visibility','visible','DIV')"><img src="imagens/nomear.jpg" alt="nomear" width="357" height="51" id="p2nomear"/></a>
+    <img src="imagens/selecionar.jpg" alt="elemento" width="357" height="51" id="p2elemento" onclick="MM_changeProp('resp2n','','visibility','visible','DIV')"/></p>
 	
 	<div id="resp2s">
 		<p>&nbsp;</p>
@@ -100,7 +101,7 @@ function MM_setTextOfLayer(objId,x,newText) { //v9.0
 	</div>
 	
 	<div id="resp2n">
-		<p>&nbsp;</p>
+	  <p>&nbsp;</p>
 	  <p><strong>Não.</strong><br>
 			Selecionar o elemento é a segunda coisa mais importante antes de adicionar comportamentos.</p>
 	</div>

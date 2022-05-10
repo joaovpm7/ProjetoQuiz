@@ -53,50 +53,50 @@ p img{
 }
 
 #resp2s{
-	position: absolute;
-	left: 7px;
-	top: 650px;
-	width: 331px;
-	height: 122px;
-	z-index: 2;
-	visibility: visible;
+    position: absolute;
+    left: 7px;
+    top: 650px;
+    width: 331px;
+    height: 122px;
+    z-index: 2;
+    visibility: hidden;
 }
 #resp2n{
-	position: absolute;
-	left: 368px;
-	top: 650px;
-	width: 336px;
-	height: 123px;
-	z-index: 3;
-	visibility: visible;
+    position: absolute;
+    left: 368px;
+    top: 650px;
+    width: 336px;
+    height: 123px;
+    z-index: 3;
+    visibility: hidden;
 }
 
 #resp4{
-	position: absolute;
-	left: 24px;
-	top: 1180px;
-	width: 685px;
-	height: 56px;
-	z-index: 4;
-	background-color: #FF8583;
-	padding: 5px;
-	visibility: visible;
+    position: absolute;
+    left: 24px;
+    top: 1180px;
+    width: 685px;
+    height: 56px;
+    z-index: 4;
+    background-color: #FF8583;
+    padding: 5px;
+    visibility: visible;
 }
 
 #resp5{
-	position: absolute;
-	left: 24px;
-	top: 1550px;
-	width: 685px;
-	height: 157px;
-	z-index: 5;
-	line-height: 25px;
-	background-color: #FFCF90;
-	padding-top: 5px;
-	padding-right: 5px;
-	padding-bottom: 5px;
-	padding-left: 0px;
-	visibility: visible;
+    position: absolute;
+    left: 24px;
+    top: 1550px;
+    width: 685px;
+    height: 157px;
+    z-index: 5;
+    line-height: 25px;
+    background-color: #FFCF90;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    visibility: hidden;
 }
 
 a.linque, a.linque:visited{
@@ -144,4 +144,3 @@ label[for=nome], label[for=email], label[for=celular]{
 	display: block;
 	float: left;
 }
-
