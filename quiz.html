@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Quiz - Comportamentos no Dreamweaver</title>
 <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+<script src="jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery-ui-effects.custom.min.js" type="text/javascript"></script>
 <script type="text/javascript">
 function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
@@ -29,6 +31,30 @@ function MM_findObj(n, d) { //v4.01
 function MM_swapImage() { //v3.0
   var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_changeProp(objId,x,theProp,theValue) { //v9.0
+  var obj = null; with (document){ if (getElementById)
+  obj = getElementById(objId); }
+  if (obj){
+    if (theValue == true || theValue == false)
+      eval("obj.style."+theProp+"="+theValue);
+    else eval("obj.style."+theProp+"='"+theValue+"'");
+  }
+}
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+function MM_DW_effectScale(obj,method,effect,dir,originY,originX,per,size,speed)
+{
+    obj[method](effect, { direction: dir, origin: [originY, originX], percent: per, scale: size }, speed);
+}
+function MM_setTextOfLayer(objId,x,newText) { //v9.0
+  with (document) if (getElementById && ((obj=getElementById(objId))!=null))
+    with (obj) innerHTML = unescape(newText);
 }
 </script>
 </head>
@@ -56,8 +82,8 @@ function MM_swapImage() { //v3.0
   <p>• verde &gt; resposta certa</p>
 </div>		
 
-<p><img src="imagens/sim.jpg" alt="sim" width="141" height="41" id="p1_sim" /></p>
-<p><img src="imagens/nao.jpg" alt="não" width="141" height="41" id="p1_nao" /></p>
+<p><img src="imagens/sim.jpg" alt="sim" width="141" height="41" id="p1_sim" onclick="MM_changeProp('resp1','','backgroundColor','#00FF7F','DIV')" /></p>
+<p><img src="imagens/nao.jpg" alt="não" width="141" height="41" id="p1_nao" onclick="MM_changeProp('resp1','','backgroundColor','#FF0000','DIV')" /></p>
 <p>&nbsp;</p>
 	
 	<h2>2.Qual o primeiro cuidado a ser tomado antes de
@@ -65,7 +91,7 @@ function MM_swapImage() { //v3.0
 		
 	
 	<p><img src="imagens/nomear.jpg" alt="nomear" width="357" height="51" id="p2nomear"/>
-    <img src="imagens/selecionar.jpg" alt="elemento" width="357" height="51" id="p2elemento"/></p>
+    <img src="imagens/selecionar.jpg" alt="elemento" width="357" height="51" id="p2elemento" onclick="MM_showHideLayers('resp2n','','hide')"/></p>
 	
 	<div id="resp2s">
 		<p>&nbsp;</p>
@@ -90,7 +116,7 @@ function MM_swapImage() { //v3.0
 	
 	
 	<p><img src="imagens/java.jpg" alt="java" width="202" height="51" id="espalhar"/>
-    <img src="imagens/javascript.jpg" alt="javascript" width="202" height="51" id="aumentar"/></p>
+    <img src="imagens/javascript.jpg" alt="javascript" width="202" height="51" id="aumentar" onclick="MM_DW_effectScale($('#aumentar'),'hide','scale','both','middle','center',150,'both',1000)"/></p>
 	
 	<p>&nbsp;</p>
 	
@@ -99,11 +125,10 @@ function MM_swapImage() { //v3.0
 	</h2>
 	
 	<p>
-      <img src="imagens/atributo.jpg" alt="atributo" width="236" height="51" id="atributo"/>
-      <img src="imagens/script_interno.jpg" alt="scriptint" width="236" height="51" id="sInterno"/>
-      <img src="imagens/script_externo.jpg" alt="scriptext" width="236" height="51" id="sExterno"/>
-		
-	</p>
+      <img src="imagens/atributo.jpg" alt="atributo" width="236" height="51" id="atributo" onclick="MM_setTextOfLayer('resp4','','Os Atributos de Comportamento são adicionados aos elementos, com onClick ou com onMouseOut')"/>
+      <img src="imagens/script_interno.jpg" alt="scriptint" width="236" height="51" id="sInterno" onclick="MM_setTextOfLayer('resp4','','O Script Interno fica na área do cabeçalho de página, entre os elementos SCRIPT.')"/>
+      <img src="imagens/script_externo.jpg" alt="scriptext" width="236" height="51" id="sExterno" onclick="MM_setTextOfLayer('resp4','','A chamada para o Script Externo fica na área do cabeçalho e é feita através do atributo SRC.')"/>	
+</p>
 	
 	
 <div id="resp4">
